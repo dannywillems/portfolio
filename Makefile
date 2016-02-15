@@ -6,7 +6,8 @@ DEBUG				= True
 
 ##### If you're using less, fill with less files
 LESS_DIR			= less
-LESS_FILES			= $(LESS_DIR)/benoit.less
+LESS_FILES			= $(LESS_DIR)/benoit.less \
+					  $(LESS_DIR)/creative.less
 
 ##### TODO: sass option
 
