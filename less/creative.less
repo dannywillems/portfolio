@@ -60,7 +60,7 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 65px 0;
 }
 
 aside {
@@ -102,6 +102,8 @@ aside {
             }
             &.active {
                 > a,
+                > .btn,
+                > .btn:focus,
                 > a:focus {
                     color: @theme-primary !important;
                     background-color: transparent;
@@ -112,38 +114,48 @@ aside {
             }
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 768px)
+    {
         background-color: transparent;
         border-color: fade(white, 30%);
-        .navbar-header .navbar-brand {
+        .navbar-header .navbar-brand
+        {
             color: fade(white, 70%);
             &:hover,
-            &:focus {
+            &:focus
+            {
                 color: white;
             }
         }
-        .nav > li > a,
-        .nav > li > a:focus {
+        .nav > li > a, .btn-menu, .btn-menu:focus,
+        .nav > li > a:focus
+        {
             color: fade(white, 70%);
-            &:hover {
+            &:hover
+            {
                 color: white;
             }
         }
-        &.affix {
+        &.affix
+        {
             background-color: white;
             border-color: fade(@theme-dark, 5%);
-            .navbar-header .navbar-brand {
+            .navbar-header .navbar-brand
+            {
                 color: @theme-primary;
                 font-size: 14px;
                 &:hover,
-                &:focus {
+                &:focus
+                {
                     color: darken(@theme-primary, 10%);
                 }
             }
-            .nav > li > a,
-            .nav > li > a:focus {
+            .nav > li > a, .btn-menu,
+            .nav > li > a:focus, .btn-menu:focus
+            {
                 color: @theme-dark;
-                &:hover {
+                &:hover
+                {
                     color: @theme-primary;
                 }
             }
@@ -345,4 +357,9 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @theme-dark;
+}
+
+.section-title
+{
+    font-size: 40px;
 }
